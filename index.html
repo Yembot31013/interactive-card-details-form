@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="stylesheet" href="css/style.css">
+  
+  <title>Frontend Mentor | Interactive card details form</title>
+
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <style>
+    .attribution { 
+      font-size: 11px; 
+      text-align: center;
+    }
+    .attribution a { 
+      color: hsl(228, 45%, 44%); 
+    }
+  </style>
+</head>
+<body>
+
+  <section class="main">
+    <div class="main-side">
+      <img src="images/bg-main-mobile.png" alt="bg main mobile" class="side-img-mobile">
+      <img src="images/bg-main-desktop.png" alt="bg main desktop" class="side-img">
+      <div class="card-group">
+        <div class="card-front-contain">
+          <img src="images/bg-card-front.png" alt="card front" class="card-front">
+          <div class="layout">
+            <img src="images/card-logo.svg" alt="card logo" class="card-logo">
+            <div class="card-text">
+              <h3 class="card-number"></h3>
+              <div class="card-detail">
+                <h3 class="card-name"></h3>
+                <h3 class="card-date">
+                  <span class="date-mm"></span>/<span class="date-yy"></span>
+                </h3>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="card-back-contain">
+          <img src="images/bg-card-back.png" alt="card back" class="card-back">
+          <div class="layout">
+            <h3 class="card-cvc"></h3>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="main-body">
+      <form action="#" class="form-body">
+        <div class="form-group-full">
+          <label for="name">Cardholder Name</label>
+          <input type="text" id="cardName" placeholder="e.g. Jane Appleseed">
+        </div>
+        <div class="form-group-full">
+          <label for="name">Card Number</label>
+          <input type="text" pattern="[\d\s]*" id="cardNumber" maxlength="19" placeholder="e.g. 1234 5678 9123 0000">
+          <span class="validation-msg"></span>
+        </div>
+        <div class="form-group">
+          <div class="input-group">
+            <label for="exp">Exp. Date (MM/YY)</label>
+            <div class="sub-input" id="expire">
+              <input type="text" pattern="\d{1,2}" class="MM" maxlength="2" placeholder="MM">
+              <input type="text" pattern="\d{1,2}" class="YY" maxlength="2" placeholder="YY">
+            </div>
+            <span class="validate-date"></span>
+          </div>
+          <div class="cvc-input">
+            <label for="cvc">CVC</label>
+            <input type="text" pattern="\d{1,4}" class="CVC" maxlength="4" placeholder="e.g. 123">
+            <span class="validate-cvc"></span>
+          </div>
+        </div>
+        <input type="submit" value="Confirm" class="submitBtn">
+
+        <div class="attribution">
+          Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+          Coded by <a href="https://codewithyembot.vercel.app" class="profile1">Adekojo Adeyemi</a>.
+        </div>
+      </form>
+      <div class="main-confirm hide">
+        <img src="images/icon-complete.svg" alt="">
+        <h1 class="title">Thank you!</h1>
+        <p class="text"> We've added your card details</p>
+        <a href="#" class="btn-confirm">Continue</a>
+
+        <div class="attribution">
+          Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+          Coded by <a href="https://codewithyembot.vercel.com/" class="profile">Adekojo Adeyemi</a>.
+        </div>
+      </div>
+    </div>
+  </section>
+  <script src="js/main.js"></script>
+</body>
+</html>
