@@ -295,6 +295,17 @@
     font-weight: bold;
 }
 
+.main .main-body .form-body .form-group .input-group .sub-input.validate-year input.YY{
+    border-color: var(--Red-input-errors);
+}
+
+.main .main-body .form-body .form-group .input-group .sub-input.validate-year ~ .validate-date::after{
+    content: "enter a valid year.";
+    color: var(--Red-input-errors);
+    font-size: 0.8rem;
+    font-weight: bold;
+}
+
 .main .main-body .form-body .form-group .cvc-input{
     display: flex;
     flex-direction: column;

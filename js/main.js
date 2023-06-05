@@ -17,6 +17,10 @@ const cvcBody = document.querySelector('.cvc-input');
 formBody.addEventListener('submit', (e)=>{
     let canSubmit = true
     e.preventDefault();
+    if (expireDate.classList.contains("validate-year")) {          
+        canSubmit = false
+    }
+
     if (!CVCInput.value){
         if (!cvcBody.classList.contains("validate-empty")){
             cvcBody.classList.add("validate-empty")
@@ -93,6 +97,11 @@ yyInput.addEventListener('keydown', function(e) {
 });
 
 yyInput.addEventListener('input', function() {
+    const currentYear = new Date().getFullYear(); // Get the current year
+    const maxAllowedYear = currentYear + 5; // Calculate the maximum allowed
+    const enteredYear = parseInt(this.value, 10); // Parse the entered year as an integer
+    const maxAllowNumber = maxAllowedYear % 100
+
     const value = yyInput.value.trim();
     const isValidYear = /^\d{2}$/.test(value);
 
@@ -109,7 +118,15 @@ yyInput.addEventListener('input', function() {
         dateYYDetail.textContent = yyInput.value
     }
 
-    if (isValidYear && value.length === 2) {
+    if (enteredYear > maxAllowNumber){
+        if (!expireDate.classList.contains("validate-year")) {          
+            expireDate.classList.add("validate-year")
+        }
+    }else{
+        expireDate.classList.remove("validate-year")
+    }
+
+    if (isValidYear && value.length === 2 && enteredYear < maxAllowNumber) {
         CVCInput.focus();
         dateYYDetail.textContent = yyInput.value
     }
