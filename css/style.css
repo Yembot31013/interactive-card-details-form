@@ -510,6 +510,9 @@
         width: 100%;
         justify-content: center;
     }
+    .main .main-side .card-group .card-front-contain .layout .card-text .card-number {
+        font-size: 1.2rem;
+    }
     .main .main-side .card-group .card-back-contain{
         position: absolute;
         top: 0;
@@ -525,7 +528,7 @@
     .main .main-body .form-body{
         width: 100%;
         padding: 0 10%;
-        min-height: 80vh;
+        min-height: 85vh;
     }
     .main .main-body .form-body .form-group-full{
         width: 100%;
