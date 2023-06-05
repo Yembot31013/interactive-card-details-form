@@ -525,7 +525,7 @@
     .main .main-body .form-body{
         width: 100%;
         padding: 0 10%;
-        min-height: 66vh;
+        min-height: 80vh;
     }
     .main .main-body .form-body .form-group-full{
         width: 100%;
@@ -539,7 +539,7 @@
     .main .main-body .main-confirm{
         width: 100%;
         padding: 0 10%;
-        height: 66vh;
+        height: 70vh;
     }
     .main .main-body .main-confirm .btn-confirm{
         width: 100%;
